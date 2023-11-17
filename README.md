@@ -3,10 +3,10 @@
 ### Grupo C
 
 ### Integrantes:
-Gabriel Rona Guzzatti - https://github.com/Guzzatti /
-João Vitor Rodrigues Rocha - https://github.com/JoaoVitorRodriguesRocha /
-Luis Henrique Parker Alves - https://github.com/Luisparker41 /
-João Pedro Darabas - https://github.com/jpdarabas
+Gabriel Rona Guzzatti - https://github.com/Guzzatti <br>
+João Vitor Rodrigues Rocha - https://github.com/JoaoVitorRodriguesRocha <br>
+Luis Henrique Parker Alves - https://github.com/Luisparker41 <br>
+João Pedro Darabas - https://github.com/jpdarabas <br>
 
 ## Professor Orientador:
 Jorge Luiz da Silva - https://github.com/jlsilva01
