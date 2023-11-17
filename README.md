@@ -21,7 +21,7 @@ Arquivo fonte: <code>link pro arquivo</code><br>
 <code>Excel ou tabela do Github (markdown)</code>
 
 ### Scripts DDL Criação do Database:
-Banco de dados utilizado SQL Server versão 2022 - Azure.<br>
+Banco de dados utilizado Oracle <br>
 <code>1 arquivo SQL por objeto</code>
 
 ### Scripts Popula tabelas:
