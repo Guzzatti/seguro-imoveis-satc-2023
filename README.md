@@ -1,11 +1,15 @@
-## Projeto Sistema de <...>
+## Projeto Sistema de Seguro De Imóveis
 
-### Grupo A
+### Grupo C
 
 ### Integrantes:
-Jorge Luiz da Silva - conta github<br>
-Fulano de Tal - conta github<br>
-Beltrano de Tal - conta github<br>
+Gabriel Rona Guzzatti - https://github.com/Guzzatti
+João Vitor Rodrigues Rocha - https://github.com/JoaoVitorRodriguesRocha
+Luis Henrique Parker Alves - https://github.com/Luisparker41
+Jão Pedro Darabas - https://github.com/jpdarabas
+
+## Professor Orientador:
+Jorge Luiz da Silva - https://github.com/jlsilva01
 
 ### Modelo Físico:
 Utilizado https://dbdiagram.io/<br>
