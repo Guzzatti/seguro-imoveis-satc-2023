@@ -9,7 +9,7 @@ Luis Henrique Parker Alves - https://github.com/Luisparker41 <br>
 João Pedro Darabas - https://github.com/jpdarabas <br>
 Lucas Fortunato Martins - https://github.com/lucasfm20 <br>
 
-## Professor Orientador:
+### Professor Orientador:
 Jorge Luiz da Silva - https://github.com/jlsilva01
 
 ### Modelo Físico:
