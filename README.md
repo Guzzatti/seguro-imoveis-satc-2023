@@ -14,7 +14,7 @@ Jorge Luiz da Silva - https://github.com/jlsilva01
 
 ### Modelo Físico:
 Utilizado https://dbdiagram.io/<br>
-Arquivo fonte: <code>[link pro arquivo](https://dbdiagram.io/d/imoveis-satc-655b579f3be149578759b62a)</code><br>
+Arquivo fonte: <code><a href="link pro arquivo">(https://dbdiagram.io/d/imoveis-satc-655b579f3be149578759b62a)</a></code><br>
 <code>imóveis-satc.png</code>
   
 ### Dicionário de Dados:
