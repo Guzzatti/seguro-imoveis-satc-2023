@@ -13,8 +13,9 @@ Lucas Fortunato Martins - https://github.com/lucasfm20 <br>
 Jorge Luiz da Silva - https://github.com/jlsilva01
 
 ### Modelo Físico:
-Utilizado https://dbdiagram.io/<br>
-Arquivo fonte: <code><a href="link pro arquivo">(https://dbdiagram.io/d/imoveis-satc-655b579f3be149578759b62a)</a></code><br>
+Utilizado: <a href="https://dbdiagram.io/">Link do site dbdiagram!</a><br/>
+Arquivo fonte: <a href="https://dbdiagram.io/d/imoveis-satc-655b579f3be149578759b62a">Link do nosso diagrama no site!</a>
+<br>
 <code>imóveis-satc.png</code>
   
 ### Dicionário de Dados:
