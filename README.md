@@ -13,10 +13,9 @@ Lucas Fortunato Martins - https://github.com/lucasfm20 <br>
 Jorge Luiz da Silva - https://github.com/jlsilva01
 
 ### Modelo Físico:
-Utilizado: <a href="https://dbdiagram.io/">Link do site dbdiagram!</a><br/>
-Arquivo fonte: <a href="https://dbdiagram.io/d/imoveis-satc-655b579f3be149578759b62a">Link do nosso diagrama no site!</a>
-<br>
-<code>imóveis-satc.png</code>
+Utilizado: <a href="https://dbdiagram.io/">Link do site dbdiagram</a><br/>
+Arquivo fonte: <a href="https://dbdiagram.io/d/imoveis-satc-655b579f3be149578759b62a">Link do nosso diagrama no site</a><br>
+imóveis-satc.png
   
 ### Dicionário de Dados:
 <code>Excel ou tabela do Github (markdown)</code>
