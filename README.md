@@ -3,7 +3,7 @@
 ### Grupo C
 
 ### Integrantes:
-Gabriel Rona Guzzatti - https://github.com/Guzzatti <br>
+Gabriel Rona Guzzatti -      <br>
 João Vitor Rodrigues Rocha - https://github.com/JoaoVitorRodriguesRocha <br>
 Luis Henrique Parker Alves - https://github.com/Luisparker41 <br>
 João Pedro Darabas - https://github.com/jpdarabas <br>

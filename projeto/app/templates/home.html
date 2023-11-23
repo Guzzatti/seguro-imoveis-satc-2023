@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Clientes:</h1>
+    <ul>
+        {% for cliente in clientes %}
+            <li>{{ cliente.Nome }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Imóveis:</h1>
+    <ul>
+        {% for imovel in imoveis %}
+            <li>{{ imovel.Endereco }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Apolices de Seguro:</h1>
+    <ul>
+        {% for apolice in apolices %}
+            <li>Cliente: {{ apolice.Cliente.Nome }}, Imóvel: {{ apolice.Imovel.Endereco }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
