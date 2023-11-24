@@ -52,7 +52,8 @@ CREATE TABLE Corretor (
     CorretorID INT PRIMARY KEY,
     Nome VARCHAR(255),
     NumeroRegistro VARCHAR(50),
-    Contato VARCHAR(15)
+    Telefone VARCHAR(15),
+    Email VARCHAR(255)
 );
 
 -- Tabela Seguradora
@@ -60,7 +61,8 @@ CREATE TABLE Seguradora (
     SeguradoraID INT PRIMARY KEY,
     Nome VARCHAR(255),
     Endereco VARCHAR(255),
-    Contato VARCHAR(15)
+    Telefone VARCHAR(15),
+    Email VARCHAR(255)
 );
 
 -- Tabela EventoSinistro
