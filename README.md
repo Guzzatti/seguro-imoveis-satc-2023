@@ -14,7 +14,7 @@ Jorge Luiz da Silva - https://github.com/jlsilva01
 ### Modelo Físico:
 Utilizado: <a href="https://dbdiagram.io/">Link do site dbdiagram</a> <br/>
 Arquivo fonte: <a href="https://dbdiagram.io/d/imoveis-satc-655b579f3be149578759b62a">Link do nosso diagrama no site</a> <br>
-<img src="file:///C:/Users/rocha/Downloads/Copy%20of%20im%C3%B3veis-satc%20(1).png"> <br>
+<img src="https://github.com/Guzzatti/seguro-imoveis-satc-2023/blob/main/Imagens/im%C3%B3veis-satc.png"> <br>
   
 ### Dicionário de Dados:
 <code>Excel ou tabela do Github (markdown)</code>
