@@ -1,0 +1,66 @@
+TABLE cliente {
+    cliente_id INT [PRIMARY KEY]
+    nome_cliente VARCHAR(255)
+    endereco_cliente VARCHAR(255)
+    telefone_cliente VARCHAR(15)
+    email_cliente VARCHAR(255)
+}
+
+TABLE imovel { 
+    imovel_id INT [PRIMARY KEY] 
+    //seguradora_id INT [ref: > seguradora.seguradora_id]
+    cliente_id INT [ref: > cliente.cliente_id]
+    endereco_imovel VARCHAR(255)  
+    tipo_imovel VARCHAR(50) 
+    valor_imovel DECIMAL(10, 2)
+} 
+
+TABLE apolice_seguro {
+    apolice_id INT [PRIMARY KEY]
+    cliente_id INT [ref: > cliente.cliente_id, unique]
+    imovel_id INT [ref: > imovel.imovel_id, unique]
+    seguradora_id INT [ref: > seguradora.seguradora_id]
+    data_inicio DATE
+    data_termino DATE
+    premio DECIMAL(10, 2)
+}
+
+TABLE cobertura_seguro {
+    cobertura_id INT [PRIMARY KEY]
+    descricao VARCHAR(255)
+    corretor_id INT [ref: > corretor.corretor_id]
+    valor_cobertura DECIMAL(10, 2)
+    apolice_id INT [ref: - apolice_seguro.apolice_id]
+}
+
+TABLE pagamento {
+    pagamento_id INT [PRIMARY KEY]
+    apolice_id INT [ref: - apolice_seguro.apolice_id]
+    data_pagamento DATE
+    valor_pagamento DECIMAL(10, 2)
+}
+
+TABLE corretor {
+    corretor_id INT [PRIMARY KEY]
+    nome_corretor VARCHAR(255)
+    numero_registro VARCHAR(50) 
+    seguradora_id INT [ref: > seguradora.seguradora_id]
+    telefone_corretor VARCHAR(15)
+    email_corretor VARCHAR(255)
+}
+
+TABLE seguradora {
+    seguradora_id INT [PRIMARY KEY] 
+    nome_seguradora VARCHAR(255) [unique] 
+    endereco_seguradora VARCHAR(255)
+    telefone_seguradora VARCHAR(15)
+    email_seguradora VARCHAR(255)
+}
+
+TABLE evento_sinistro {
+    sinistro_id INT [PRIMARY KEY]
+    apolice_id INT [ref: > apolice_seguro.apolice_id]
+    data_sinistro DATE
+    descricao_sinistro VARCHAR(255)
+    valor_sinistro DECIMAL(10, 2)
+}
