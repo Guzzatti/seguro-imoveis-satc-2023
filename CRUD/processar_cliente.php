@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processar Cliente</title>
+    <title>Seguradora de Imóveis</title>
     <link rel="stylesheet" href="processar_cliente.css">
 </head>
-
 <body>
 <?php
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "scriptbdseguro";
+$dbname = "scriptbdseguro2";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -100,5 +96,4 @@ if ($resultClientes->num_rows > 0) {
 $conn->close();
 ?>
 </body>
-
 </html>
