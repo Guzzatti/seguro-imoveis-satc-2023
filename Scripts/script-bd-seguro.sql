@@ -8,48 +8,61 @@ CREATE TABLE cliente (
 
 CREATE TABLE imovel (
     imovel_id INT PRIMARY KEY,
-    cliente_id INT REFERENCES cliente(cliente_id),
+    cliente_id INT,
     endereco_imovel VARCHAR(255),
     tipo_imovel VARCHAR(50),
-    valor_imovel DECIMAL(12, 2)
+    valor_imovel DECIMAL(12, 2),
+    FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id)
 );
 
+CREATE TABLE cobertura (
+    cobertura_id INT PRIMARY KEY,
+    cobertura_seguro_id INT,
+    descricao VARCHAR(255),
+    premio DECIMAL(12, 2),
+    limite_indenizacao DECIMAL(12, 2),
+    seguradora_id INT,
+    obrigatorio BOOLEAN,
+    FOREIGN KEY (cobertura_seguro_id) REFERENCES cobertura_seguro(cobertura_seguro_id),
+    FOREIGN KEY (seguradora_id) REFERENCES seguradora(seguradora_id)
+);
 
 CREATE TABLE apolice_seguro (
     apolice_id INT PRIMARY KEY,
-    cliente_id INT UNIQUE REFERENCES cliente(cliente_id),
-    imovel_id INT UNIQUE REFERENCES imovel(imovel_id),
-    seguradora_id INT REFERENCES seguradora(seguradora_id),
+    cliente_id INT UNIQUE,
+    imovel_id INT UNIQUE,
+    seguradora_id INT,
+    corretor_id INT,
     data_inicio DATE,
     data_termino DATE,
-    premio DECIMAL(12, 2)
+    FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id),
+    FOREIGN KEY (imovel_id) REFERENCES imovel(imovel_id),
+    FOREIGN KEY (seguradora_id) REFERENCES seguradora(seguradora_id),
+    FOREIGN KEY (corretor_id) REFERENCES corretor(corretor_id)
 );
-
 
 CREATE TABLE cobertura_seguro (
-    cobertura_id INT PRIMARY KEY,
-    descricao VARCHAR(255),
-    corretor_id INT REFERENCES corretor(corretor_id),
-    valor_cobertura DECIMAL(10, 2),
-    apolice_id INT REFERENCES apolice_seguro(apolice_id)
+    cobertura_seguro_id INT PRIMARY KEY,
+    apolice_id INT,
+    FOREIGN KEY (apolice_id) REFERENCES apolice_seguro(apolice_id)
 );
-
 
 CREATE TABLE pagamento (
     pagamento_id INT PRIMARY KEY,
-    apolice_id INT REFERENCES apolice_seguro(apolice_id),
+    apolice_id INT,
     data_pagamento DATE,
-    valor_pagamento DECIMAL(10, 2)
+    valor_pagamento DECIMAL(10, 2),
+    FOREIGN KEY (apolice_id) REFERENCES apolice_seguro(apolice_id)
 );
-
 
 CREATE TABLE corretor (
     corretor_id INT PRIMARY KEY,
     nome_corretor VARCHAR(255),
     numero_registro VARCHAR(50),
-    seguradora_id INT REFERENCES seguradora(seguradora_id),
+    seguradora_id INT,
     telefone_corretor VARCHAR(15),
-    email_corretor VARCHAR(255)
+    email_corretor VARCHAR(255),
+    FOREIGN KEY (seguradora_id) REFERENCES seguradora(seguradora_id)
 );
 
 CREATE TABLE seguradora (
@@ -62,8 +75,9 @@ CREATE TABLE seguradora (
 
 CREATE TABLE evento_sinistro (
     sinistro_id INT PRIMARY KEY,
-    apolice_id INT REFERENCES apolice_seguro(apolice_id),
+    apolice_id INT,
     data_sinistro DATE,
     descricao_sinistro VARCHAR(255),
-    valor_sinistro DECIMAL(12, 2)
+    valor_sinistro DECIMAL(12, 2),
+    FOREIGN KEY (apolice_id) REFERENCES apolice_seguro(apolice_id)
 );

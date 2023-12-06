@@ -12,25 +12,32 @@ TABLE imovel {
     cliente_id INT [ref: > cliente.cliente_id]
     endereco_imovel VARCHAR(255)  
     tipo_imovel VARCHAR(50) 
-    valor_imovel DECIMAL(10, 2)
+    valor_imovel DECIMAL(12, 2)
 } 
+
+TABLE cobertura {
+    cobertura_id INT [PRIMARY KEY]
+    cobertura_seguro_id INT [ref: < cobertura_seguro.cobertura_seguro_id]
+    descricao VARCHAR(255)
+    premio DECIMAL(12, 2)
+    limite_indenizacao DECIMAL(12, 2)
+    seguradora_id INT [ref: > seguradora.seguradora_id]
+    obrigatorio BOOLEAN
+}
 
 TABLE apolice_seguro {
     apolice_id INT [PRIMARY KEY]
     cliente_id INT [ref: > cliente.cliente_id, unique]
     imovel_id INT [ref: > imovel.imovel_id, unique]
     seguradora_id INT [ref: > seguradora.seguradora_id]
+    corretor_id INT [ref: > corretor.corretor_id]
     data_inicio DATE
     data_termino DATE
-    premio DECIMAL(10, 2)
 }
 
 TABLE cobertura_seguro {
-    cobertura_id INT [PRIMARY KEY]
-    descricao VARCHAR(255)
-    corretor_id INT [ref: > corretor.corretor_id]
-    valor_cobertura DECIMAL(10, 2)
-    apolice_id INT [ref: - apolice_seguro.apolice_id]
+    cobertura_seguro_id INT [PRIMARY KEY]
+    apolice_id INT [ref: > apolice_seguro.apolice_id]
 }
 
 TABLE pagamento {
@@ -62,5 +69,5 @@ TABLE evento_sinistro {
     apolice_id INT [ref: > apolice_seguro.apolice_id]
     data_sinistro DATE
     descricao_sinistro VARCHAR(255)
-    valor_sinistro DECIMAL(10, 2)
+    valor_sinistro DECIMAL(12, 2)
 }
