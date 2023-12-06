@@ -1,5 +1,5 @@
 CREATE TABLE cliente (
-    cliente_id INT PRIMARY KEY,
+    cliente_id INT AUTO_INCREMENT PRIMARY KEY,
     nome_cliente VARCHAR(255),
     endereco_cliente VARCHAR(255),
     telefone_cliente VARCHAR(15),
@@ -7,7 +7,7 @@ CREATE TABLE cliente (
 );
 
 CREATE TABLE imovel (
-    imovel_id INT PRIMARY KEY,
+    imovel_id INT AUTO_INCREMENT PRIMARY KEY,
     cliente_id INT,
     endereco_imovel VARCHAR(255),
     tipo_imovel VARCHAR(50),
@@ -16,7 +16,7 @@ CREATE TABLE imovel (
 );
 
 CREATE TABLE cobertura (
-    cobertura_id INT PRIMARY KEY,
+    cobertura_id INT AUTO_INCREMENT PRIMARY KEY,
     cobertura_seguro_id INT,
     descricao VARCHAR(255),
     premio DECIMAL(12, 2),
@@ -28,7 +28,7 @@ CREATE TABLE cobertura (
 );
 
 CREATE TABLE apolice_seguro (
-    apolice_id INT PRIMARY KEY,
+    apolice_id INT AUTO_INCREMENT PRIMARY KEY,
     cliente_id INT UNIQUE,
     imovel_id INT UNIQUE,
     seguradora_id INT,
@@ -42,13 +42,13 @@ CREATE TABLE apolice_seguro (
 );
 
 CREATE TABLE cobertura_seguro (
-    cobertura_seguro_id INT PRIMARY KEY,
+    cobertura_seguro_id INT AUTO_INCREMENT PRIMARY KEY,
     apolice_id INT,
     FOREIGN KEY (apolice_id) REFERENCES apolice_seguro(apolice_id)
 );
 
 CREATE TABLE pagamento (
-    pagamento_id INT PRIMARY KEY,
+    pagamento_id INT AUTO_INCREMENT PRIMARY KEY,
     apolice_id INT,
     data_pagamento DATE,
     valor_pagamento DECIMAL(10, 2),
@@ -56,7 +56,7 @@ CREATE TABLE pagamento (
 );
 
 CREATE TABLE corretor (
-    corretor_id INT PRIMARY KEY,
+    corretor_id INT AUTO_INCREMENT PRIMARY KEY,
     nome_corretor VARCHAR(255),
     numero_registro VARCHAR(50),
     seguradora_id INT,
@@ -66,7 +66,7 @@ CREATE TABLE corretor (
 );
 
 CREATE TABLE seguradora (
-    seguradora_id INT PRIMARY KEY,
+    seguradora_id INT AUTO_INCREMENT PRIMARY KEY,
     nome_seguradora VARCHAR(255) UNIQUE,
     endereco_seguradora VARCHAR(255),
     telefone_seguradora VARCHAR(15),
@@ -74,7 +74,7 @@ CREATE TABLE seguradora (
 );
 
 CREATE TABLE evento_sinistro (
-    sinistro_id INT PRIMARY KEY,
+    sinistro_id INT AUTO_INCREMENT PRIMARY KEY,
     apolice_id INT,
     data_sinistro DATE,
     descricao_sinistro VARCHAR(255),
