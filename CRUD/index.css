@@ -1,24 +1,35 @@
-/* Estilos para o cabeçalho */
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-bottom: 20px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
+h1, h2 {
     color: #333;
 }
 
-/* Estilos para o formulário */
+.touchable-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.touchable-button:hover {
+    background-color: #0056b3;
+}
+
 form {
     max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 5px;
+    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 label {
@@ -30,34 +41,27 @@ label {
 input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
+    margin-bottom: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
-/* Estilos para os botões */
-.touchable-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.touchable-button:hover {
-    background-color: #ccc;
-}
-
-a.touchable-button {
-    display: block;
+table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 20px;
-    text-align: center;
 }
 
-a.touchable-button:hover {
-    background-color: #ccc;
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
 }

@@ -39,6 +39,8 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciar Imóveis</title>
+    <link rel="stylesheet" href="add_imovel.css">
+
 </head>
 <body>
 
@@ -48,7 +50,7 @@ $conn->close();
         <label for="endereco">Endereço:</label>
         <input type="text" name="endereco" required>
 
-        <label for="tipoImovel">Tipo de Imóvel:</label>
+        <label for="tipoImovel">Imóvel:</label>
         <input type="text" name="tipoImovel" required>
 
         <label for="valorImovel">Valor do Imóvel:</label>

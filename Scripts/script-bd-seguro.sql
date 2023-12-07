@@ -17,13 +17,11 @@ CREATE TABLE imovel (
 
 CREATE TABLE cobertura (
     cobertura_id INT AUTO_INCREMENT PRIMARY KEY,
-    cobertura_seguro_id INT,
     descricao VARCHAR(255),
     premio DECIMAL(12, 2),
     limite_indenizacao DECIMAL(12, 2),
     seguradora_id INT,
     obrigatorio BOOLEAN,
-    FOREIGN KEY (cobertura_seguro_id) REFERENCES cobertura_seguro(cobertura_seguro_id),
     FOREIGN KEY (seguradora_id) REFERENCES seguradora(seguradora_id)
 );
 
@@ -41,10 +39,12 @@ CREATE TABLE apolice_seguro (
     FOREIGN KEY (corretor_id) REFERENCES corretor(corretor_id)
 );
 
-CREATE TABLE cobertura_seguro (
-    cobertura_seguro_id INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE cobertura_apolice ( 
+    cobertura_apolice_id INT AUTO_INCREMENT PRIMARY KEY,
     apolice_id INT,
-    FOREIGN KEY (apolice_id) REFERENCES apolice_seguro(apolice_id)
+    cobertura_id INT,
+    FOREIGN KEY (apolice_id) REFERENCES apolice_seguro(apolice_id),
+    FOREIGN KEY (cobertura_id) REFERENCES cobertura(cobertura_id)
 );
 
 CREATE TABLE pagamento (

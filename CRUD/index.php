@@ -3,11 +3,15 @@
 <head>
     <title>Seguradora de Imóveis</title>
     <link rel="stylesheet" href="index.css">
+
 </head>
 <body>
 
 <?php
-// Conectar ao banco de dados (substitua com suas credenciais)
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -15,12 +19,26 @@ $dbname = "scriptbdseguro";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar a conexão
 if ($conn->connect_error) {
     die("Erro na conexão: " . $conn->connect_error);
 }
 
-// Consulta SQL para obter a lista de imóveis com os nomes dos clientes
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nomeCliente = mysqli_real_escape_string($conn, $_POST['nome_cliente']);
+    $enderecoCliente = mysqli_real_escape_string($conn, $_POST['endereco_cliente']);
+    $telefoneCliente = mysqli_real_escape_string($conn, $_POST['telefone_cliente']);
+    $emailCliente = mysqli_real_escape_string($conn, $_POST['email_cliente']);
+
+    $sql = "INSERT INTO cliente (nome_cliente, endereco_cliente, telefone_cliente, email_cliente) 
+            VALUES ('$nomeCliente', '$enderecoCliente', '$telefoneCliente', '$emailCliente')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Cliente adicionado com sucesso.";
+    } else {
+        echo "Erro ao adicionar o cliente: " . $conn->error;
+    }
+}
+
 $sqlImoveisClientes = "SELECT i.*, c.nome_cliente
                        FROM imovel i
                        JOIN cliente c ON i.cliente_id = c.cliente_id";
@@ -31,7 +49,6 @@ $resultImoveisClientes = $conn->query($sqlImoveisClientes);
 <h1>Seguradora de Imóveis</h1>
 <a href="add_imovel.php" class="touchable-button">Adicionar Imóvel</a>
 
-<!-- Formulário para adicionar cliente -->
 <h2>Adicionar Cliente</h2>
 <form action="index.php" method="post">
     <label for="nome_cliente">Nome:</label>
@@ -51,9 +68,12 @@ $resultImoveisClientes = $conn->query($sqlImoveisClientes);
 
 <a href="processar_cliente.php" class="touchable-button">Editar Clientes</a>
 
-<!-- Listagem de imóveis com nomes de clientes -->
 <h2>Lista de Imóveis</h2>
-<table border='1'>
+
+<!-- Adicione um input para a pesquisa -->
+<input type="text" id="searchInput" onkeyup="search()" placeholder="Pesquisar por cliente">
+
+<table id="imoveisTable" border='1'>
     <tr>
         <th>Imóvel ID</th>
         <th>Cliente</th>
@@ -75,10 +95,35 @@ $resultImoveisClientes = $conn->query($sqlImoveisClientes);
     ?>
 </table>
 
+
+<script>
+    // Função para realizar a pesquisa
+    function search() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("imoveisTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Iterar sobre as linhas da tabela e ocultar aquelas que não correspondem à pesquisa
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1]; // 1 é o índice da coluna "Cliente"
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+
 </body>
 </html>
 
 <?php
-// Fechar a conexão com o banco de dados
 $conn->close();
 ?>
