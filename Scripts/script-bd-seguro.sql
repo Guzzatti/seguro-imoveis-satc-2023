@@ -2,7 +2,7 @@ CREATE TABLE cliente (
     cliente_id INT AUTO_INCREMENT PRIMARY KEY,
     nome_cliente VARCHAR(255),
     endereco_cliente VARCHAR(255),
-    telefone_cliente VARCHAR(15),
+    telefone_cliente VARCHAR(20),
     email_cliente VARCHAR(255)
 );
 
@@ -69,7 +69,7 @@ CREATE TABLE seguradora (
     seguradora_id INT AUTO_INCREMENT PRIMARY KEY,
     nome_seguradora VARCHAR(255) ,
     endereco_seguradora VARCHAR(255),
-    telefone_seguradora VARCHAR(15),
+    telefone_seguradora VARCHAR(20),
     email_seguradora VARCHAR(255)
 );
 

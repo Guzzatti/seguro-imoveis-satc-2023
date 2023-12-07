@@ -23,10 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["alterar"])) {
         $cliente_id = $_POST["alterar"];
         // Implemente a lógica para ação de alterar aqui
-        $novo_nome = $POST["novo_nome$cliente_id"];
-        $novo_endereco = $POST["novo_endereco$cliente_id"];
-        $novo_telefone = $POST["novo_telefone$cliente_id"];
-        $novo_email = $POST["novo_email$cliente_id"];
+        $novo_nome = $_POST["novo_nome_" . $cliente_id];
+        $novo_endereco = $_POST["novo_endereco_" . $cliente_id];
+        $novo_telefone = $_POST["novo_telefone_" . $cliente_id];
+        $novo_email = $_POST["novo_email_" . $cliente_id];
+
 
         $sql = "UPDATE cliente SET nome_cliente='$novo_nome', endereco_cliente='$novo_endereco', telefone_cliente='$novo_telefone', email_cliente='$novo_email' WHERE cliente_id=$cliente_id";
 

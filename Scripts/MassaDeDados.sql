@@ -1,15 +1,15 @@
-INSERT INTO cliente (nome_cliente, endereco_cliente, telefone_cliente, email_cliente)
-VALUES
-('João Vitor', 'Rua A, 123', '+55 11 98765-4321', 'joao.vitor@gmail.com'),
-('Maria Oliveira', 'Av. B, 456', '+55 21 99876-5432', 'maria.oliveira@gmail.com'),
-('Carlos Santos', 'Rua C, 789', '+55 31 98765-8765', 'carlos.santos@gmail.com'),
-('Fernanda de Souza', 'Rua D, 321', '+55 11 12345-6789', 'fernanda@gmail.com'),
-('Ricardo Silva', 'Av. E, 654', '+55 21 98765-4321', 'ricardo@gmail.com'),
-('Patricia Duarte', 'Rua F, 987', '+55 31 87654-3210', 'patricia@gmail.com'),
-('Pedro Pinto', 'Av. G, 789', '+55 11 5555-1111', 'pedro@gmail.com'),
-('Isabela Rodrigues', 'Rua H, 987', '+55 21 6666-2222', 'isabela@gmail.com'),
-('Felipe Rocha', 'Av. I, 654', '+55 31 7777-3333', 'felipe@gmail.com'),
-('Amanda Lima', 'Rua J, 321', '+55 41 8888-4444', 'amanda@gmail.com')
+    INSERT INTO cliente (nome_cliente, endereco_cliente, telefone_cliente, email_cliente)
+    VALUES
+    ('João Vitor', 'Rua A, 123', '+55 11 98765-4321', 'joao.vitor@gmail.com'),
+    ('Maria Oliveira', 'Av. B, 456', '+55 21 99876-5432', 'maria.oliveira@gmail.com'),
+    ('Carlos Santos', 'Rua C, 789', '+55 31 98765-8765', 'carlos.santos@gmail.com'),
+    ('Fernanda de Souza', 'Rua D, 321', '+55 11 12345-6789', 'fernanda@gmail.com'),
+    ('Ricardo Silva', 'Av. E, 654', '+55 21 98765-4321', 'ricardo@gmail.com'),
+    ('Patricia Duarte', 'Rua F, 987', '+55 31 87654-3210', 'patricia@gmail.com'),
+    ('Pedro Pinto', 'Av. G, 789', '+55 11 5555-1111', 'pedro@gmail.com'),
+    ('Isabela Rodrigues', 'Rua H, 987', '+55 21 6666-2222', 'isabela@gmail.com'),
+    ('Felipe Rocha', 'Av. I, 654', '+55 31 7777-3333', 'felipe@gmail.com'),
+    ('Amanda Lima', 'Rua J, 321', '+55 41 8888-4444', 'amanda@gmail.com')
 
 INSERT INTO imovel (cliente_id, endereco_imovel, tipo_imovel, valor_imovel)
 VALUES
