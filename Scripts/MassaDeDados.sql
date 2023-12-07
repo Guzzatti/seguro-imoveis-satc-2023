@@ -11,18 +11,18 @@ VALUES
 ('Felipe Rocha', 'Av. I, 654', '+55 31 7777-3333', 'felipe@gmail.com'),
 ('Amanda Lima', 'Rua J, 321', '+55 41 8888-4444', 'amanda@gmail.com')
 
-INSERT INTO imovel (endereco_imovel, tipo_imovel, valor_imovel)
+INSERT INTO imovel (cliente_id, endereco_imovel, tipo_imovel, valor_imovel)
 VALUES
-('Rua A, 123', 'Casa', 300000.00),
-('Av. B, 456', 'Apartamento', 200000.00),
-('Rua C, 789', 'Casa', 250000.00),
-('Rua D, 321', 'Apartamento', 180000.00),
-('Av. E, 654', 'Casa', 280000.00),
-('Rua F, 987', 'Apartamento', 220000.00),
-('Av. G, 789', 'Casa', 350000.00),
-('Rua H, 987', 'Apartamento', 180000.00),
-('Av. I, 654', 'Casa', 270000.00),
-('Rua J, 321', 'Apartamento', 200000.00)
+(1, 'Rua A, 123', 'Casa', 300000.00),
+(2, 'Av. B, 456', 'Apartamento', 200000.00),
+(3, 'Rua C, 789', 'Casa', 250000.00),
+(4, 'Rua D, 321', 'Apartamento', 180000.00),
+(5, 'Av. E, 654', 'Casa', 280000.00),
+(6, 'Rua F, 987', 'Apartamento', 220000.00),
+(7, 'Av. G, 789', 'Casa', 350000.00),
+(8, 'Rua H, 987', 'Apartamento', 180000.00),
+(9, 'Av. I, 654', 'Casa', 270000.00),
+(10, 'Rua J, 321', 'Apartamento', 200000.00)
 
 INSERT INTO seguradora (nome_seguradora, endereco_seguradora, telefone_seguradora, email_seguradora)
 VALUES
