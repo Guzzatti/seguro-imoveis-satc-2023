@@ -27,8 +27,8 @@ CREATE TABLE cobertura (
 
 CREATE TABLE apolice_seguro (
     apolice_id INT AUTO_INCREMENT PRIMARY KEY,
-    cliente_id INT UNIQUE,
-    imovel_id INT UNIQUE,
+    cliente_id INT ,
+    imovel_id INT ,
     seguradora_id INT,
     corretor_id INT,
     data_inicio DATE,
@@ -67,7 +67,7 @@ CREATE TABLE corretor (
 
 CREATE TABLE seguradora (
     seguradora_id INT AUTO_INCREMENT PRIMARY KEY,
-    nome_seguradora VARCHAR(255) UNIQUE,
+    nome_seguradora VARCHAR(255) ,
     endereco_seguradora VARCHAR(255),
     telefone_seguradora VARCHAR(15),
     email_seguradora VARCHAR(255)
