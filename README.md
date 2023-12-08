@@ -33,9 +33,6 @@ Functions: TriggerFunctionProc.sql <br>
 Código Fonte do CRUD: Pasta CRUD no diretório de pastas <br>
 Linguagem de Programação: PHP. HTML. JavaScript. CSS <br>
 Framework: EasyPHP <br>
-Projeto Windows Forms <br>
-Biblioteca Entity Framework para SQL Server (nativo) <br>
-Codigo Fonte:  <br>
 
 ### Relatório Final
-O relatório final está disponível no arquivo template1.docx.
+O relatório final está disponível no arquivo seguros-de-imovel (1).pdf
