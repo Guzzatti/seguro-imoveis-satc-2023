@@ -17,8 +17,8 @@ Utilizamos a ferramenta de modelagem de dados <a href="https://dbdiagram.io/">db
 <img src="https://github.com/Guzzatti/seguro-imoveis-satc-2023/blob/main/Imagens/ModeloFisicoER.png"> <br>
   
 ### Dicionário de Dados:
-As informações sobre as tabelas e índices foram documentados na planilha (Link Planilha)
-
+As informações sobre as tabelas e índices foram documentados na planilha (<a href="https://alunosatcedu-my.sharepoint.com/:x:/g/personal/joao_102922_alunosatc_edu_br/EY1P8WFdVMBJh7d20TSHbukBOKoQQlQciJVgQYaaycJbzQ?e=yla7og">Link Planilha<a>
+)
 ### Scripts SQL
 Para este projeto foi utilizado o banco de dados Easy PHP
 
