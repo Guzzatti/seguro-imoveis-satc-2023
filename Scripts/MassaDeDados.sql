@@ -37,18 +37,7 @@ VALUES
 ('Seguradora I', 'Rua M, 789', '+55 31 3333-7777', 'contato@seguradoraI.com'),
 ('Seguradora J', 'Av. N, 987', '+55 41 4444-8888', 'contato@seguradoraJ.com')
 
-INSERT INTO corretor (nome_corretor, numero_registro, seguradora_id, telefone_corretor, email_corretor)
-VALUES
-('Ana 1', 'CR123', 1, '+55 11 5555-6666', 'ana.1@corretora.com'),
-('José 2', 'CR456', 2, '+55 21 6666-7777', 'jose.2@corretora.com'),
-('Mariana 3', 'CR789', 3, '+55 31 7777-8888', 'mariana.3@corretora.com'),
-('Roberto 4', 'CR234', 1, '+55 11 2222-3333', 'roberto.4@corretora.com'),
-('Camila 5', 'CR567', 2, '+55 21 3333-4444', 'camila.5@corretora.com'),
-('Lucas Fortunato Martins', 'CR890', 3, '+55 31 4444-5555', 'lucasfm20@corretora.com'),
-('Rafaela 6', 'CR567', 1, '+55 11 5555-9999', 'rafaela.6@corretora.com'),
-('Luciano 7', 'CR890', 2, '+55 21 6666-0000', 'luciano.7@corretora.com'),
-('Gabriel Guzzati', 'CR123', 3, '+55 31 7777-1111', 'guzzateradasnovinha+18@corretora.com'),
-('João Pedro Darabas', 'CR456', 4, '+55 41 8888-2222', 'jpdarabas@corretora.com')
+c
 
 INSERT INTO cobertura (descricao, premio, limite_indenizacao, seguradora_id, obrigatorio)
 VALUES
