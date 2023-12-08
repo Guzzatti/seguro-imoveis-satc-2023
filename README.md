@@ -14,8 +14,8 @@ Jorge Luiz da Silva - https://github.com/jlsilva01
 ### Modelo Físico:
 Utilizamos a ferramenta de modelagem de dados <a href="https://dbdiagram.io/">dbdiagram.io</a> <br/> para criação do modelo físico do banco de dados, para posterior exportação dos scripts DDL das tabelas e relacionamentos.
 <a href="https://dbdiagram.io/d/imoveis-satc-655b579f3be149578759b62a">Arquivo fonte</a> <br>
-<img src="https://github.com/Guzzatti/seguro-imoveis-satc-2023/blob/main/Imagens/ModeloFisicoER.png"> <br>
-  
+  ![image](https://github.com/Guzzatti/seguro-imoveis-satc-2023/assets/136494543/e8658f59-6ac1-4f6a-9e1b-920a1ec226c3) <br>
+
 ### Dicionário de Dados:
 As informações sobre as tabelas e índices foram documentados na planilha (<a href="https://alunosatcedu-my.sharepoint.com/:x:/g/personal/joao_102922_alunosatc_edu_br/EY1P8WFdVMBJh7d20TSHbukBOKoQQlQciJVgQYaaycJbzQ?e=yla7og">Link Planilha<a>
 )
