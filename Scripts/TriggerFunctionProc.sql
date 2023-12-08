@@ -1,32 +1,10 @@
 DELIMITER $$
 
-CREATE FUNCTION coberturas_obrigatorias(id_seguradora INT)
-RETURNS TABLE
-BEGIN
-    DECLARE resultado TABLE (
-        cobertura_id INT,
-        descricao VARCHAR(255),
-        premio DECIMAL(12, 2),
-        limite_indenizacao DECIMAL(12, 2)
-    );
-
-    INSERT INTO resultado (cobertura_id, descricao, premio, limite_indenizacao)
-    SELECT cobertura_id, descricao, premio, limite_indenizacao
-    FROM cobertura
-    WHERE seguradora_id = id_seguradora AND obrigatorio = true;
-
-    RETURN resultado;
-END $$
-
-DELIMITER ;
-
-DELIMITER $$
-
 CREATE FUNCTION premio_apolice(id_apolice INT)
 RETURNS DECIMAL(12, 2)
 BEGIN
     DECLARE resultado DECIMAL(12, 2);
-    SELECT resultado = SUM(premio)
+    SELECT SUM(c.premio) INTO resultado
     FROM cobertura_apolice ca
     INNER JOIN cobertura c
     ON ca.cobertura_id = c.cobertura_id
