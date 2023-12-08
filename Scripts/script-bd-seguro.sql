@@ -60,7 +60,7 @@ CREATE TABLE corretor (
     nome_corretor VARCHAR(255),
     numero_registro VARCHAR(50),
     seguradora_id INT,
-    telefone_corretor VARCHAR(15),
+    telefone_corretor VARCHAR(20),
     email_corretor VARCHAR(255),
     FOREIGN KEY (seguradora_id) REFERENCES seguradora(seguradora_id)
 );
